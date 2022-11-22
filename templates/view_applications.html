@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Мои заявки</h1>
+  <form method="get">
+    {{ filter.form }}
+    <button type="submit">Найти</button>
+  </form>
+  {% if applications_borrower %}
+    {% for application in filter.qs %}
+      <p>
+        {{ application.date }} {{ application.title }} {{ application.description }} {{ application.category }} {{ application.status_verbose }}
+        <img width="200px" height="200px" src="{{ application.photo.url }}">
+        {% if application.status == 'new' %}
+          <a href="{% url 'delete_application' application.pk %}"><button>Удалить</button></a>
+        {% endif %}
+      </p>
+    {% endfor %}
+  {% else %}
+    <p>У вас нет действующих заявок</p>
+  {% endif %}
+{% endblock %}

@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 
-from .models import User
+from .models import User, Application, Category
 
 
 class RegisterUserForm(forms.ModelForm):
@@ -16,9 +16,9 @@ class RegisterUserForm(forms.ModelForm):
                                                                                     'буквы, дефис и пробелы')],
                                 error_messages={'required': 'Обязательное поле'})
 
-    patronymic = forms.CharField(label='Отчество', validators=[RegexValidator('^[а-яА-Я- ]+$',
-                                                                              message='Разрешены только кириллические '
-                                                                                      'буквы, дефис и пробелы')])
+    patronymic = forms.CharField(label='Отчество', required=False, validators=[RegexValidator('^[а-яА-Я- ]+$',
+                                                                            message='Разрешены только кириллические '
+                                                                                     'буквы, дефис и пробелы')])
 
     username = forms.CharField(label='Логин', validators=[RegexValidator('^[a-zA-Z-]+$',
                                                                          message='Разрешены только латиница и дефис')],
@@ -60,4 +60,17 @@ class RegisterUserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'patronymic', 'username', 'email', 'password', 'password2', 'personal')
+        fields = ('first_name', 'last_name', 'patronymic',
+                  'username', 'email', 'password', 'password2', 'personal')
+
+
+class CreateApplicationForm(forms.ModelForm):
+    class Meta:
+        model = Application
+        fields = ['title', 'description', 'category', 'photo']
+
+
+class CreateCategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ['title']

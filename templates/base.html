@@ -15,6 +15,11 @@
     <a href="{% url 'index' %}">Главная</a>
     {% if user.is_authenticated %}
         <a href="{% url 'profile' %}">Ваш профиль</a>
+        <a href="{% url 'create_application' %}">Создать заявку</a>
+        <a href="{% url 'view_applications' %}">Мои заявки</a>
+        {% if user.is_superuser %}
+            <a href="{% url 'view_categories' %}">Управление категориями</a>
+        {% endif %}
         <a href="{% url 'logout' %}">Выход</a>
     {% else %}
         <a href="{% url 'login' %}">Вход</a>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <a href="{% url 'create_category' %}">Добавить категорию</a>
+  {% if categories_list %}
+    {% for category in categories_list %}
+      <p>
+        {{ category.title }}
+        <a href="{% url 'delete_category' category.pk %}">Удалить</a>
+      </p>
+    {% endfor %}
+  {% else %}
+    <p>Не существует категорий заявок</p>
+  {% endif %}
+{% endblock %}
