@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, FileExtensionValidator
 
 from .models import User, Application, Category
 
@@ -74,3 +74,15 @@ class CreateCategoryForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = ['title']
+
+
+class AddDesignApplications(forms.ModelForm):
+    class Meta:
+        model = Application
+        fields = ['design']
+
+
+class AddCommentApplications(forms.ModelForm):
+    class Meta:
+        model = Application
+        fields = ['comment']

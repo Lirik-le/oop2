@@ -1,3 +1,5 @@
+from audioop import reverse
+
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
@@ -53,6 +55,14 @@ class Application(models.Model):
                               choices=STATUS_CHOICES,
                               default='new')
     borrower = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True)
+    design = models.ImageField(upload_to=get_name_file,
+                               help_text="Максимальный размер изображения 2MB",
+                               blank=True,
+                               null=True,
+                               validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'bmp']),
+                                           limited_image],
+                               verbose_name='Картинка')
+    comment = models.TextField(max_length=500, verbose_name='Комментарий', blank=True)
 
     def status_verbose(self):
         return dict(self.STATUS_CHOICES)[self.status]
@@ -62,6 +72,9 @@ class Application(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('application', args=[str(self.id)])
 
 
 class Category(models.Model):

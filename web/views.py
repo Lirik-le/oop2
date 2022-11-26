@@ -1,12 +1,12 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.views import LogoutView
-from django.shortcuts import render
+from django.contrib.auth.views import LogoutView, LoginView
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import CreateView, DeleteView
 
 from .filters import ApplicationFilter
-from .forms import RegisterUserForm, CreateApplicationForm, CreateCategoryForm
+from .forms import *
 from .models import Application, Category
 
 
@@ -29,7 +29,10 @@ class ViewApplicationsBorrower(LoginRequiredMixin, generic.ListView):
         return context
 
     def get_queryset(self):
-        return Application.objects.filter(borrower=self.request.user)
+        if self.request.user.is_superuser:
+            return Application.objects.all()
+        else:
+            return Application.objects.filter(borrower=self.request.user)
 
 
 def profile(request):
@@ -80,3 +83,33 @@ class CreateCategory(CreateView):
 class DeleteCategory(LoginRequiredMixin, DeleteView):
     model = Category
     success_url = reverse_lazy('view_categories')
+
+
+def confirm_update(request, pk, st):
+    newApplication = Application.objects.get(id=pk)
+    newApplication.save()
+
+    if st == 'done':
+        if request.method == 'POST':
+            form = AddDesignApplications(request.POST, request.FILES)
+            if form.is_valid():
+                newApplication.design = form.cleaned_data['design']
+                newApplication.status = st
+                newApplication.save()
+                return redirect('view_applications')
+        else:
+            form = AddDesignApplications()
+        return render(request, 'update_application.html', {'form': form})
+
+    if st == 'in progress':
+        if request.method == 'POST':
+            form = AddCommentApplications(request.POST, request.FILES)
+            if form.is_valid():
+                newApplication.comment = form.cleaned_data['comment']
+                newApplication.status = st
+                newApplication.save()
+                return redirect('view_applications')
+        else:
+            form = AddCommentApplications()
+        return render(request, 'update_application.html', {'form': form})
+

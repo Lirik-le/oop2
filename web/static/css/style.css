@@ -1,4 +1,210 @@
-body {
+* {
     padding: 0;
     margin: 0;
+    font-family: Verdana, sans-serif;
+    color: lightgray;
+}
+
+/* форма */
+
+input {
+    background-color: rgb(83, 83, 83);
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: rgb(43, 43, 43);
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    border-right: 3px solid rgb(243, 117, 71);
+}
+
+body {
+    background-color: rgb(68, 68, 68)
+}
+
+main {
+    margin-left: 300px;
+}
+
+.cont {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cont_inner {
+    width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav_inner > li {
+    margin: 10px;
+    text-align: center;
+}
+
+.nav_inner > li > a {
+    font-size: 18px;
+}
+
+.logo {
+    margin: 30px 0;
+    font-size: 40px;
+    color: rgb(243, 117, 71);
+}
+
+/* главная страница */
+
+.index_name > h1 {
+    margin: 20px 0 10px 0;
+}
+
+.app_done {
+    width: 600px;
+    border: 3px solid rgb(243, 117, 71);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.app_done > h4 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.app_done > p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.app_done > p:last-of-type {
+    margin-top: 20px;
+}
+
+.app_inPr {
+    margin: 20px 0;
+}
+
+.app_done_prim {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* профиль */
+
+.profile > p {
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+
+.profile > ul {
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.profile > ul > li {
+    list-style-type: none;
+    text-align: left;
+    
+}
+
+.profile_adm {
+    margin-top: 30px;
+}
+
+/* выход */
+
+.logout > h2 {
+    margin: 30px 0;
+}
+
+/* вход */
+
+table {
+    margin: 20px auto;
+}
+
+td {
+    text-align: left;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.inp_login {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* заявки */
+
+.app_all {
+    width: 600px;
+    border: 3px solid rgb(243, 117, 71);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.app_all > h4 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.app_all > p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.app_all > p {
+    margin: 10px 0;
+}
+
+.app_all > p:last-of-type {
+    margin: 10px 0 20px 0;
+}
+
+.app_all > a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+.apps_form {
+    margin-top: 20px;
+}
+
+.apps_form > label {
+    font-size: 20px;
+}
+
+.apps_form > select {
+    background-color: rgb(83, 83, 83);
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+    cursor: pointer;
+}
+
+.apps_form > button {
+    background-color: rgb(83, 83, 83);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+    cursor: pointer;
 }

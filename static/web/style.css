@@ -1,0 +1,416 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: lightgray;
+}
+
+.errorlist > li {
+    list-style-type: none;
+    margin: 20px 0 10px 0;
+}
+
+/* форма */
+
+input {
+    background-color: rgb(83, 83, 83);
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: rgb(43, 43, 43);
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    border-right: 3px solid rgb(243, 117, 71);
+}
+
+body {
+    background-color: rgb(68, 68, 68)
+}
+
+main {
+    margin-left: 300px;
+}
+
+.cont {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cont_inner {
+    width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav_inner > li {
+    margin: 10px;
+    text-align: center;
+}
+
+.nav_inner > li > a {
+    font-size: 18px;
+}
+
+.logo {
+    margin: 30px 0;
+    font-size: 40px;
+    color: rgb(243, 117, 71);
+}
+
+/* главная страница */
+
+.index_name > h1 {
+    margin: 20px 0 10px 0;
+}
+
+.app_done {
+    width: 600px;
+    border: 3px solid rgb(243, 117, 71);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.app_done > h4 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.app_done > p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.app_done > p:last-of-type {
+    margin-top: 20px;
+}
+
+.app_inPr {
+    margin: 20px 0;
+}
+
+.app_done_prim {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* профиль */
+
+.profile > p {
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+
+.profile > ul {
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.profile > ul > li {
+    list-style-type: none;
+    text-align: left;
+    
+}
+
+.profile_adm {
+    margin-top: 30px;
+}
+
+/* выход */
+
+.logout > h2 {
+    margin: 30px 0;
+}
+
+/* вход */
+
+table {
+    margin: 20px auto;
+}
+
+td {
+    text-align: left;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.inp_login {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* заявки */
+
+.app_all {
+    width: 600px;
+    border: 3px solid rgb(243, 117, 71);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+.app_all > h4 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.app_all > p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.app_all > p {
+    margin: 10px 0;
+}
+
+.app_all > p:last-of-type {
+    margin: 10px 0 20px 0;
+}
+
+.app_all > a {
+    padding: 5px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+.apps_form {
+    margin-top: 20px;
+}
+
+.apps_form > label {
+    font-size: 20px;
+}
+
+.apps_form > select {
+    background-color: rgb(83, 83, 83);
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+    cursor: pointer;
+}
+
+.no_app {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(83, 83, 83);
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+/* регистрация */
+
+.reg > form > p {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.reg_logo {
+    margin-bottom: 15px;
+}
+
+.reg > form > p:last-of-type {
+    width: 85%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg > form > p > input{
+    width: 300px;
+    margin-top: 10px;
+}
+.reg > form > p:last-of-type >  input {
+    width: 20px;
+    margin: 0 10px;
+    margin-top: 0;
+}
+
+/* категория */
+
+.add_cat {
+    margin: 20px 0;
+}
+
+.add_cat > h1 {
+    margin-bottom: 25px;
+}
+
+
+.add_cat > a {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+.cat {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.cat > a {
+    font-size: 18px;
+}
+
+.conf_cat > p {
+    font-size: 22px;
+    margin: 30px 0 10px 0;
+}
+
+.conf_cat > form > button {
+    width: 100px;
+    cursor: pointer;
+}
+
+.cr_cat > form > p {
+    margin: 20px 0;
+}
+
+.cr_cat > form > p > label {
+    font-size: 20px;
+}
+
+/* изменить заявку */
+
+.up_app > h1 {
+    margin-bottom: 20px;
+}
+
+.up_app > form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.up_app > form > label {
+    font-size: 20px;
+}
+
+.up_app > form > textarea {
+    margin: 10px 0;
+    background-color: rgb(83, 83, 83);
+    max-width: 380px;
+    min-width: 380px;
+    width: 380px;
+    height: 150px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+.up_app > form > input {
+    background-color: rgb(83, 83, 83);
+    width: 200px;
+    height: 100%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+.up_app > form > span {
+    font-size: 16px;
+    display: block;
+    margin: 15px 0;
+}
+
+/* удаление заявки */
+
+.conf_del > p {
+    margin: 15px 0;
+}
+
+/* создание заявки */
+
+.cr_app > form {
+    margin-top: 15px;
+    width: 400px;
+    margin: 0 auto;
+}
+.cr_app > form > p {
+    width: 250px;
+    margin: 15px auto;
+}
+
+.cr_app > form > p > label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cr_app > form > p:nth-of-type(3){
+    width: 400px;
+}
+
+.cr_app > form > p:nth-of-type(3) > label{
+    display: inline;
+}
+
+.cr_app > form > p:nth-of-type(3) > select{
+    background-color: rgb(83, 83, 83);
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+    cursor: pointer;
+}
+
+.cr_app > form > p:nth-of-type(4) > label{
+    display: inline;
+}
+
+.cr_app > form > p:nth-of-type(2) {
+    width: 400px;
+}
+
+.cr_app > form > p:nth-of-type(2) > textarea {
+    background-color: rgb(83, 83, 83);
+    max-width: 380px;
+    min-width: 380px;
+    width: 380px;
+    height: 150px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+}
+
+.cr_app > form > p:nth-of-type(4) {
+    width: 400px;
+}
+
+.cr_app > form > p:nth-of-type(4) > span {
+    font-size: 14px;
+}
+
+.cr_app > form > p:nth-of-type(4) > input {
+    background-color: rgb(83, 83, 83);
+    width: 200px;
+    height: 100%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 117, 71);
+    margin-bottom: 10px;
+}
+
